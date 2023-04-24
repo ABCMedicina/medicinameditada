@@ -15,7 +15,7 @@
     <p>Procedimiento: {{$cancelarData["procedimiento"]}}</p>
     <p>Médico: {{$cancelarData["medico"]}}</p>
     <br>
-    <p>Si necesita agendar nuevamente, lo puede realizar desde su cuenta o comuníquese con nosotros.
+    <p>Si necesita agendar nuevamente, lo puede realizar desde su cuenta o comuníquese con nosotros..
 
     </p>
 </body>
