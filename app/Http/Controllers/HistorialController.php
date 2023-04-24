@@ -1,0 +1,214 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\Cita;
+use App\Models\Agenda;
+use App\Models\User;
+use App\Models\Procedimiento;
+
+class HistorialController extends Controller
+{
+    public function index()
+    {
+        //Variable citas agendadas
+        $citas_agendadas=Cita::count();
+        //citas agendadas del dia de acuerdo al campo create_at
+        $citas_agendadas_dia=Cita::whereDate('created_at', date('Y-m-d'))->count();
+        //citas agendadas de la semana de acuerdo al campo create_at
+        $citas_agendadas_semana=Cita::whereBetween('created_at', [date('Y-m-d', strtotime('monday this week')), date('Y-m-d', strtotime('sunday this week'))])->count();
+        //citas agendadas del mes de acuerdo al campo create_at
+        $citas_agendadas_mes=Cita::whereMonth('created_at', date('m'))->count();
+
+
+        //Variable citas atendidas
+        $citas_atendidas=Cita::where('estado', 2)->count();
+        //citas atendidas del dia de acuerdo al campo create_at
+        $citas_atendidas_dia=Cita::where('estado', 2)->whereDate('created_at', date('Y-m-d'))->count();
+        //citas atendidas de la semana de acuerdo al campo create_at
+        $citas_atendidas_semana=Cita::where('estado', 2)->whereBetween('created_at', [date('Y-m-d', strtotime('monday this week')), date('Y-m-d', strtotime('sunday this week'))])->count();
+        //citas atendidas del mes de acuerdo al campo create_at
+        $citas_atendidas_mes=Cita::where('estado', 2)->whereMonth('created_at', date('m'))->count();
+        
+
+        //Variable citas canceladas
+        $citas_canceladas=Cita::where('estado', 3)->count();
+        //citas canceladas del dia de acuerdo al campo create_at
+        $citas_canceladas_dia=Cita::where('estado', 3)->whereDate('updated_at', date('Y-m-d'))->count();
+        //citas canceladas de la semana de acuerdo al campo create_at
+        $citas_canceladas_semana=Cita::where('estado', 3)->whereBetween('updated_at', [date('Y-m-d', strtotime('monday this week')), date('Y-m-d', strtotime('sunday this week'))])->count();
+        //citas canceladas del mes de acuerdo al campo create_at
+        $citas_canceladas_mes=Cita::where('estado', 3)->whereMonth('updated_at', date('m'))->count();
+
+        
+        $procedimientos=Cita::where('estado', 2)->whereHas('agenda', function($query){
+            $query->where('tipo', 2);
+        })->count();
+        // contar procedimientos realizados del dia de acuerdo al campo create_at
+        $procedimientos_dia=Cita::where('estado', 2)->whereHas('agenda', function($query){
+            $query->where('tipo', 2);
+        })->whereDate('created_at', date('Y-m-d'))->count();
+        //procedimientos realizados de la semana de acuerdo al campo create_at
+        $procedimientos_semana=Cita::where('estado', 2)->whereHas('agenda', function($query){
+            $query->where('tipo', 2);
+        })->whereBetween('created_at', [date('Y-m-d', strtotime('monday this week')), date('Y-m-d', strtotime('sunday this week'))])->count();
+        //procedimientos realizados del mes de acuerdo al campo create_at
+        $procedimientos_mes=Cita::where('estado', 2)->whereHas('agenda', function($query){
+            $query->where('tipo', 2);
+        })->whereMonth('created_at', date('m'))->count();
+
+
+        $citas_agendadas= [
+            'citas_agendadas' => $citas_agendadas,
+            'citas_agendadas_dia' => $citas_agendadas_dia,
+            'citas_agendadas_semana' => $citas_agendadas_semana,
+            'citas_agendadas_mes' => $citas_agendadas_mes,
+        ];
+
+        $citas_atendidas= [
+            'citas_atendidas' => $citas_atendidas,
+            'citas_atendidas_dia' => $citas_atendidas_dia,
+            'citas_atendidas_semana' => $citas_atendidas_semana,
+            'citas_atendidas_mes' => $citas_atendidas_mes,
+        ];
+
+
+        $citas_canceladas= [
+            'citas_canceladas' => $citas_canceladas,
+            'citas_canceladas_dia' => $citas_canceladas_dia,
+            'citas_canceladas_semana' => $citas_canceladas_semana,
+            'citas_canceladas_mes' => $citas_canceladas_mes,
+        ];
+
+        $procedimientos= [
+            'procedimientos' => $procedimientos,
+            'procedimientos_dia' => $procedimientos_dia,
+            'procedimientos_semana' => $procedimientos_semana,
+            'procedimientos_mes' => $procedimientos_mes,
+        ];
+        return view('admin.historial.index', compact('citas_agendadas', 'citas_atendidas','citas_canceladas','procedimientos'));
+    }
+    
+
+    //Función para los reportes de los historiales
+    public function reporte(Request $request, $tipo) {
+        
+       // $medicos = User::where('rol_id', 2)->where('estado', 1)->get();
+       // $procedimientos = Procedimiento::where('activo', 1)->get();
+
+        //Mostrar reporte del historial de las citas agendadas por pacientes
+        if ($tipo == 'agendadas_ttl') {
+            $citas = Cita::paginate(10)->withQueryString();
+            $tipo_reporte = 'Total citas agendadas';
+        } else if ($tipo == 'agendadas_dia') {
+            $citas = Cita::whereDate('created_at', date('Y-m-d'))->paginate(10)->withQueryString();
+            $tipo_reporte = 'Citas agendadas del dia';
+        } else if ($tipo == 'agendadas_semana') {
+            $citas = Cita::whereBetween('created_at', [date('Y-m-d', strtotime('monday this week')), date('Y-m-d', strtotime('sunday this week'))])->paginate(10)->withQueryString();
+            $tipo_reporte = 'Citas agendadas de la semana';
+        } else if ($tipo == 'agendadas_mes') {
+            $citas = Cita::whereMonth('created_at', date('m'))->paginate(10)->withQueryString();
+            $tipo_reporte = 'Citas agendadas del mes';
+        } 
+
+        //Mostrar reporte del historial de las citas atendidas
+        if ($tipo == 'atendidas_ttl') {
+            $citas=Cita::where('estado', 2)->paginate(10)->withQueryString();
+            $tipo_reporte = 'Total citas atendidas';
+        } else if ($tipo == 'atendidas_dia') {
+            $citas=Cita::where('estado', 2)->whereDate('created_at', date('Y-m-d'))->paginate(10)->withQueryString();
+            $tipo_reporte = 'Citas atendidas del dia';
+        } else if ($tipo == 'atendidas_semana') {
+            $citas=Cita::where('estado', 2)->whereBetween('created_at', [date('Y-m-d', strtotime('monday this week')), date('Y-m-d', strtotime('sunday this week'))])->paginate(10)->withQueryString();
+            $tipo_reporte = 'Citas atendidas de la semana';
+        } else if ($tipo == 'atendidas_mes') {
+            $citas=Cita::where('estado', 2)->whereMonth('created_at', date('m'))->paginate(10)->withQueryString();
+            $tipo_reporte = 'Citas atendidas del mes';
+        } 
+
+
+       //Mostrar reporte del historial de las citas canceladas
+        if ($tipo == 'canceladas_ttl') {
+            $citas=Cita::where('estado', 3)->paginate(10)->withQueryString();
+            $tipo_reporte = 'Total citas canceladas';
+        } else if ($tipo == 'canceladas_dia') {
+            $citas=Cita::where('estado', 3)->whereDate('updated_at', date('Y-m-d'))->paginate(10)->withQueryString();
+            $tipo_reporte = 'Citas canceladas del dia';
+        } else if ($tipo == 'canceladas_semana') {
+            $citas=Cita::where('estado', 3)->whereBetween('updated_at', [date('Y-m-d', strtotime('monday this week')), date('Y-m-d', strtotime('sunday this week'))])->paginate(10)->withQueryString();
+            $tipo_reporte = 'Citas canceladas de la semana';
+        } else if ($tipo == 'canceladas_mes') {
+            $citas=Cita::where('estado', 3)->whereMonth('updated_at', date('m'))->paginate(10)->withQueryString();
+            $tipo_reporte = 'Citas canceladas del mes';
+        } 
+
+
+       //Mostrar reporte del historial de los procedimientos
+        if ($tipo == 'procedimientos_ttl') {
+            $citas=Cita::where('estado', 2)->whereHas('agenda', function($query){
+                $query->where('tipo', 2);
+            })->paginate(10)->withQueryString();           
+            $tipo_reporte = 'Total procedimientos';
+        } else if ($tipo == 'procedimientos_dia') {
+            $citas=Cita::where('estado', 2)->whereHas('agenda', function($query){
+                $query->where('tipo', 2);
+            })->whereDate('created_at', date('Y-m-d'))->paginate(10)->withQueryString();             
+            $tipo_reporte = 'Procedimientos del dia';
+        } else if ($tipo == 'procedimientos_semana') {
+            $citas=Cita::where('estado', 2)->whereHas('agenda', function($query){
+                $query->where('tipo', 2);
+            })->whereBetween('created_at', [date('Y-m-d', strtotime('monday this week')), date('Y-m-d', strtotime('sunday this week'))])->paginate(10)->withQueryString();        
+            $tipo_reporte = 'Procedimientos de la semana';
+        } else if ($tipo == 'procedimientos_mes') {
+            $citas=Cita::where('estado', 2)->whereHas('agenda', function($query){
+                $query->where('tipo', 2);
+            })->whereMonth('created_at', date('m'))->paginate(10)->withQueryString();  
+            $tipo_reporte = 'Procedimientos del mes';
+        } 
+
+       
+
+
+       /* if($request->paciente || $request->fecha || $request->procedimiento || $request->medico)
+        {
+            if($request->paciente)
+            {
+                //$usuarios=User::where('name', 'like', '%'.$request->nombre.'%')->where('id', '!=', 1)->paginate(10)->withQueryString();
+                 $citas=Agenda::where('fecha', $request->fecha)->paginate(10)->withQueryString();
+                return view('admin.agendas.index', compact('agendas','medicos','procedimientos'));
+            }
+            if($request->fecha)
+            {
+
+                $citas=Agenda::where('medico_id', $request->medico)->paginate(10)->withQueryString();
+                return view('admin.agendas.index', compact('agendas','medicos','procedimientos'));
+            }
+            if($request->procedimiento)
+            {
+
+                $agendas=Agenda::where('procedimiento_id', $request->procedimiento)->paginate(10)->withQueryString();
+                return view('admin.agendas.index', compact('agendas','medicos','procedimientos'));
+            }
+            if($request->medico)
+            {
+
+                $agendas=Agenda::where('tipo', $request->tipo)->paginate(10)->withQueryString();
+                return view('admin.agendas.index', compact('agendas','medicos','procedimientos'));
+            }
+        }*/
+
+       /* if($request->paciente)
+        {
+            //tomar el array de $citas y hacer un filtro por el nombre del paciente
+            $citas = $citas->filter(function($cita) use ($request) {
+                return $cita->paciente->name == $request->paciente;
+            });
+
+            $citas = collect($citas)->paginate(10)->withQueryString();
+        }*/
+
+        return view('admin.historial.reporte', compact('citas', 'tipo_reporte'));
+    }
+    
+}
