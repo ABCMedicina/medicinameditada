@@ -135,7 +135,7 @@ class UserController extends Controller
 
             'fecha_nacimiento' => ['required', 'date'],
             'telefono' => ['required', 'numeric', 'digits:10'],
-            'direccion' => ['required', 'string', 'max:255'],
+            //'direccion' => ['required', 'string', 'max:255'],
             // validar email unico excepto el que se esta editando
             'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class.',email,'.$user->id],
             
@@ -148,7 +148,7 @@ class UserController extends Controller
             'documento' => $request->documento,
             'fecha_nacimiento' => $request->fecha_nacimiento,
             'telefono' => $request->telefono,
-            'direccion' => $request->direccion,
+            'direccion' => "",
             'email' => $request->email,
             'rol_id' => $request->rol_id,
         ]);

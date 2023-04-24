@@ -65,12 +65,12 @@
                             <x-input-error :messages="$errors->get('telefono')" class="mt-2" />
                         </div>
 
-                        <!-- Direccion -->
+                        <!-- Direccion
                         <div>
                             <x-input-label class="mt-2" for="direccion" :value="__('Dirección')" />
                             <x-text-input id="direccion" class="input block mt-1 w-full" type="text" name="direccion" :value="old('direccion', $user->direccion)" required />
                             <x-input-error :messages="$errors->get('direccion')" class="mt-2" />
-                        </div>
+                        </div>-->
 
                         <!-- Email Address -->
                         <div class="mt-2">
