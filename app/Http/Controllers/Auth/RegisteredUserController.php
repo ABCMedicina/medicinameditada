@@ -35,8 +35,8 @@ class RegisteredUserController extends Controller
         //dd($request->all());
         $request->validate([
             //'name' => ['required', 'string', 'max:255'],
-            'nombres' => ['required', 'string', 'max:255','alpha'],
-            'apellidos' => ['required', 'string', 'max:255', 'alpha'],
+            'nombres' => ["required", "string", "max:255", "regex:/^[a-zA-ZáéíóúñÑ\s'.-]+$/"],
+            'apellidos' => ["required", "string", "max:255", "regex:/^[a-zA-ZáéíóúñÑ\s'.-]+$/"],
             'documento' => ['required', 'string', 'max:30', 'regex:/^[A-Z0-9]+$/', 'unique:'.User::class],
             'fecha_nacimiento' => ['required', 'date'],
             'telefono' => ['required', 'numeric', 'digits:10'],

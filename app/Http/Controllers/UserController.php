@@ -63,8 +63,8 @@ class UserController extends Controller
     {
         $request->validate([
            
-            'nombres' => ['required', 'string', 'max:255', 'alpha'],
-            'apellidos' => ['required', 'string', 'max:255','alpha'],
+            'nombres' => ["required", "string", "max:255", "regex:/^[a-zA-ZáéíóúñÑ\s'.-]+$/"],
+            'apellidos' => ["required", "string", "max:255", "regex:/^[a-zA-ZáéíóúñÑ\s'.-]+$/"],
             'documento' => ['required', 'string', 'max:30', 'regex:/^[A-Z0-9]+$/', 'unique:'.User::class],
             'fecha_nacimiento' => ['required', 'date'],
            /* 'telefono' => ['required', 'string', 'max:30'],*/
@@ -127,8 +127,8 @@ class UserController extends Controller
     {
         //validamos los datos
         $request->validate([
-            'nombres' => ['required', 'string', 'max:255', 'alpha'],
-            'apellidos' => ['required', 'string', 'max:255', 'alpha'],
+            'nombres' => ["required", "string", "max:255", "regex:/^[a-zA-ZáéíóúñÑ\s'.-]+$/"],
+            'apellidos' => ["required", "string", "max:255", "regex:/^[a-zA-ZáéíóúñÑ\s'.-]+$/"],
             // validar documento unico excepto el que se esta editando
            // 'documento' => ['required', 'numeric', 'unique:'.User::class.',documento,'.$user->id],
             'documento' => ['required', 'string', 'max:30', 'regex:/^[A-Z0-9]+$/', 'unique:'.User::class.',documento,'.$user->id],
