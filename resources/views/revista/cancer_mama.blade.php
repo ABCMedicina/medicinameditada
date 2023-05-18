@@ -8,9 +8,9 @@
 <div class="hero min-h-screen bg-base-200" id="hero">
   <div class="hero-content flex-col lg:flex-row-reverse">
         <div class="flex-col">
-                <img id="image1" src="{{ asset('storage/images/cancer3.jpg') }}" />
+                <img id="image1" src="{{ asset('storage/images/cancermama1.jpg') }}" />
                 <br>
-                <img id="image1" src="{{ asset('storage/images/cancer4.jpg') }}" />
+                <img id="image1" src="{{ asset('storage/images/cancermama2.1.jpg') }}" />
 
         </div>
     <div>

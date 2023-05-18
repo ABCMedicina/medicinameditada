@@ -79,6 +79,10 @@ Route::get('/revista/servicios', function(){
     return view('revista.servicios');
 })->name('servicios');
 
+//Ruta para videos informativos
+Route::get('/revista/videos', function(){
+    return view('revista.videos');
+})->name('videos');
 
 
 //Ruta dashboard

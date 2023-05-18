@@ -20,9 +20,9 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                   <div class="flex justify-center">
                     <div class="card w-96 bg-base-100 shadow-xl">
-                        <figure class="px-10 pt-10">
+                     <!--   <figure class="px-10 pt-10">
                           <img src="https://source.unsplash.com/random/200x200/?face" alt="foto" class="rounded-full" />
-                        </figure>
+                        </figure>-->
                         <div class="card-body">
                           <h2 class="card-title">{{ $user->nombres . ' ' . $user->apellidos }}</h2>
                           <div class="divider"></div> 

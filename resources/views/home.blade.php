@@ -23,7 +23,7 @@
     <div id="text-medio" >
     <div class="hero min-h-screen" >
             <div  class="hero-content flex-col lg:flex-row-reverse" >
-             <img id="imagenmedio" src="{{ asset('storage/images/box2.jpg') }}" class="max-w-sm rounded-lg shadow-2xl" style="width:300px;" />
+             <img id="imagenmedio" src="{{ asset('storage/images/ejem2.jpg') }}" class="max-w-sm rounded-lg shadow-2xl" style="width:300px;" />
                 <div  style="padding-right:50px;">
                     <div style="box-shadow: -5px 0px 5px -5px black, 0px 5px 5px -5px black; padding-left:10px;">
                                 <h1 id="cardtittle1" style="font-size: 22px; color:white;" align="center">Nuevos procedimientos de cirugía plástica</h1><br>
@@ -46,10 +46,11 @@
     </div>
     
     <div id="text-final" class="card card-side bg-base-100 shadow-xl m-20">
-        <figure><img id="imagenfinal" src="{{ asset('storage/images/box3.jpg') }}"alt="Médicos"/></figure>
+        <figure><img id="imagenfinal" src="{{ asset('storage/images/box3.1.jpg') }}"alt="Médicos" style="width:700px; height:355px;"/></figure>
         <div class="card-body">
         <h2 class="card-title" style="font-size:25px;">Contamos con los mejores especialistas</h2>
-        <p id="texto3">Nuestra clínica cuenta con las mejores medidas sanitarias para garantizar la seguridad y salud de nuestros pacientes. Nos aseguramos de cumplir con todos los protocolos establecidos para evitar la propagación de enfermedades y contamos con un equipo de profesionales altamente capacitados en el manejo de situaciones sanitarias complejas.
+        <br><br>
+        <p id="texto3" >Nuestra clínica cuenta con las mejores medidas sanitarias para garantizar la seguridad y salud de nuestros pacientes. Nos aseguramos de cumplir con todos los protocolos establecidos para evitar la propagación de enfermedades y contamos con un equipo de profesionales altamente capacitados en el manejo de situaciones sanitarias complejas.
         <br><br>Sabemos que nuestros clientes confían en nosotros para brindarles la mejor atención y asesoramiento, y es por eso que nos esforzamos constantemente por mantener a nuestro equipo actualizado en las últimas tendencias y avances tecnológicos en su campo. Puede estar seguro de que al trabajar con nosotros, estará en manos de los mejores especialistas de la industria.
         </p>
         <div class="card-actions justify-end">

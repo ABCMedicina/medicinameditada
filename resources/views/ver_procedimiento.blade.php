@@ -7,7 +7,7 @@
 
     <div class="hero min-h-screen bg-base-200" >
           <div class="hero-content flex-col lg:flex-row ml-24 mr-24">
-            <img class="max-w-sm rounded-lg shadow-2xl procedimiento-img" src="{{asset('storage/images/procedimientos/proced'.$procedimiento->id.'.jpg') }}" alt="Procedimientos">
+            <img class="max-w-sm rounded-lg shadow-2xl procedimiento-img" src="{{asset('storage/images/procedimientos/pr/p'.$procedimiento->id.'.jpg') }}" alt="Procedimientos">
             
             <div>
                   <br>

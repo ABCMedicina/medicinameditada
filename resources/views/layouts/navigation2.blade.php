@@ -1,34 +1,47 @@
 <nav x-data="{ open: false }"  class="navbar" style="background-color:#091a32; color:white; position:fixed; z-index:999;"><!--<div class="navbar bg-green-100">-->
-    <div class="navbar-start hidden md:flex">
+    <div class="navbar-start hidden lg:flex">
         <a href="/" class="navbar-brand">
             <img class=" ml-5 rounded-full" src="{{ asset('storage/images/logo.jpg') }}" alt="Logo" style="height:58px;">
         </a>
     </div>
   
-    <div class="navbar-center hidden md:flex">
+    <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-compact menu-horizontal px-1">   
-       <li tabindex="0"><a>Revista
-            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
-        </a>
-            <ul class="z-10 " style="background-color: #496063; color: white;">
-                <li><a href="{{route('braquioplastia')}}">Braquioplastía</a></li>
-                <li><a href="{{route('cancer_mama')}}">Cáncer de mama</a></li>
-                <li><a href="{{route('cirugia_plastica')}}">Cirugía Plástica</a></li>
-                <li><a href="{{route('cirugia')}}">Cirugía Reconstructiva en México</a></li>
-                <li><a href="{{route('ginecomastia')}}">Ginecomastía</a></li>
 
-            </ul>
-        </li>  
+      <li><a href="{{route('acercade')}}">Quiénes somos</a></li>
+
+
+      
       
         <li tabindex="0">
           <a>
             Procedimientos
             <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
           </a>
+          
           @include ('partials.lista_procedimientos')
           
         </li>
        
+        
+        <li tabindex="0">
+          <a href="{{route('videos')}}">
+            Videos      
+          </a>
+        </li>
+
+        <li tabindex="0"><a>Blog
+            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
+        </a>
+            <ul class="z-10 " style="background-color: #496063; color: white; ">
+            <li><a href="{{route('cancer_mama')}}">Cáncer de mama</a></li>
+            <li><a href="{{route('cirugia')}}">Cirugía Reconstructiva en México</a></li>
+            <li><a href="{{route('cirugia_plastica')}}">Cirugía Plástica</a></li>
+            <li><a href="{{route('braquioplastia')}}">Estética de brazos</a></li>
+            <li><a href="{{route('ginecomastia')}}">Torso masculino</a></li>
+            </ul>
+        </li>  
+        <li><a href="{{route('horarios')}}">Horarios de atención</a></li>
 
         <li tabindex="0"><a>Agendar
                         <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
@@ -43,11 +56,10 @@
                         </ul>
                     </li>
         
-        <li><a href="{{route('horarios')}}">Horarios de atención</a></li>
         <li><a href="{{route('contacto')}}">Contacto</a></li>
       </ul>
     </div>
-    <div class="navbar-end hidden md:flex">
+    <div class="navbar-end hidden lg:flex">
         @if (Route::has('login'))
             <div>
                 @auth
@@ -66,8 +78,8 @@
 
     <!-- Hamburger--> 
     
-    <div class="flex flex-col md:hidden md:h-28"  >
-        <div  class=" md:hidden flex">
+    <div class="flex flex-col lg:hidden lg:h-28"  >
+        <div  class="lg:hidden flex">
         <a href="/" class="navbar-brand">
 
             <img class=" mx-2 rounded-full" src="{{ asset('storage/images/logo.jpg') }}" alt="Logo" style="height: 58px;">
@@ -91,12 +103,12 @@
                     Revista
                     <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
                     </label>
-                    <ul tabindex="0" class="menu menu-compact dropdown-content shadow bg-base-200 rounded-box" style="background-color:#496063; color:white; width: 250px;" >
-                        <li><a href="{{route('braquioplastia')}}">Braquioplastía</a></li>
+                    <ul tabindex="0" class="menu menu-compact dropdown-content shadow bg-base-200 rounded-box" style="background-color: #496063; color: white; width: 250px;">
+                        <li><a href="{{route('braquioplastia')}}">Estética de brazos</a></li>
                         <li><a href="{{route('cancer_mama')}}">Cáncer de mama</a></li>
                         <li><a href="{{route('cirugia_plastica')}}">Cirugía Plástica</a></li>
                         <li><a href="{{route('cirugia')}}">Cirugía Reconstructiva en México</a></li>
-                        <li><a href="{{route('ginecomastia')}}">Ginecomastía</a></li>
+                        <li><a href="{{route('ginecomastia')}}">Torso masculino</a></li>
                     </ul>
                 </div>
             
@@ -109,6 +121,13 @@
                         @include ('partials.lista_procedimientos')
                     </ul>
                 </div>
+
+                <a id="labels" href="{{route('videos')}}" class="btn btn-sm btn-ghost">
+                Videos&nbsp;
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                        <path d="M3.25 4A2.25 2.25 0 001 6.25v7.5A2.25 2.25 0 003.25 16h7.5A2.25 2.25 0 0013 13.75v-7.5A2.25 2.25 0 0010.75 4h-7.5zM19 4.75a.75.75 0 00-1.28-.53l-3 3a.75.75 0 00-.22.53v4.5c0 .199.079.39.22.53l3 3a.75.75 0 001.28-.53V4.75z" />
+                    </svg>
+                </a>
 
                 @if (Auth::check() && Auth::user()->rol_id == 3)
                     <a id="labels" href="{{route('citas.buscar')}}" class="btn btn-sm btn-ghost">Agendar</a>
@@ -132,26 +151,51 @@
       
     </div>
     </div>
+   
 </nav>
 
 
 <style>
   
   #h1 {
-  display: flex; /* Establece el elemento div como contenedor flexible */
-  justify-content: center; /* Centra horizontalmente el contenido */
-  align-items: center; /* Centra verticalmente el contenido */
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
   padding-left: 50%;
 
 }
 
-.img {
-    display: none;
-  }
-#labels:hover {
-        background-color: #209ce2;
+   .parent {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
     }
 
+    .parent li {
+        list-style: none;
+    }
+
+
+    .img {
+        display: none;
+    }
+
+    #labels:hover {
+            background-color: #209ce2;
+    }
+
+    @media screen and (max-width: 553px) {
+        .parent {
+        display: grid;
+        grid-template-columns: repeat(2 1fr);
+        grid-gap: 10px;
+    }
+
+    .parent li {
+        list-style: none;
+    }
+
+}
 
 
 

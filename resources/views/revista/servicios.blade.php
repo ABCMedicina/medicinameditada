@@ -19,7 +19,6 @@
     <h2 class="card-title font-bold" style="color:#091a32;">Primer consulta</h2>
     <p style="color:#091a32;">Brinda un enfoque inicial de la situación que provocó la consulta, para aclarar las opciones de tratamiento y las técnicas a utilizar, explicando los riesgos y beneficios involucrados en el servicio.
 
-    <br>Una vez realizada esta visita, comienza un período de preparación que incluye homeopatía, acupuntura y técnicas de relajación y meditación con el propósito de nutrir el equilibrio del cuerpo, la mente y el alma.
 
     <br><br>PREPARACIÓN
 
@@ -42,7 +41,7 @@
 <div class="card w-90 mx-auto mt-5 bg-primary text-primary-content" style="background-color:#e2e2e2;">
   <div class="card-body">
     <h2 class="card-title">Cirugía</h2>
-    <p>La cirugía solo se lleva a cabo en el American British Cowdray Medical Center, I.A.P. (Hospital ABC), respaldados por un extenso equipo de profesionales asociados
+    <p>La cirugía puede llevarse a cabo en el <a href="https://centromedicoabc.com"><u>American British Cowdray Medical Center, I.A.P. (Hospital ABC)</u></a> o en <a href="https://cortaestanciapolanco.com"><u>Cirugía de Corta Estancia Polanco</u></a>, respaldados por un extenso equipo de profesionales asociados.
     </p>
     <div class="card-actions justify-end">
     </div>
@@ -53,7 +52,7 @@
   <div class="card-body">
     <h2 class="card-title">Control postoperatorio</h2>
     <p>Todas las consultas posteriores al procedimiento y la atención se llevan a cabo personalmente.
-    <br>Las consultas programadas se realizan de acuerdo a las necesidades del proceso de cicatrización personal, siendo libres durante los primeros 30 días naturales con el propósito de facilitar el acceso al paciente.
+    <br>Las consultas programadas se realizan de acuerdo a las necesidades del proceso de cicatrización personal, siendo imperantes estas consultas durante los primeros 30 días posteriores a la cirugía, con el propósito de evitar complicaciones.
     </p>
     <div class="card-actions justify-end">
     </div>
@@ -64,19 +63,19 @@
   <div class="card-body">
     <h2 class="card-title">Recomendaciones</h2>
     <p>Cualquier procedimiento, ya sea estético o reconstructivo, implica riesgos, y estos no se considerarán superficiales.
-    <br>No eres un producto, sino un ser humano que busca un equilibrio, por lo tanto te recomendamos:</p>
+    <br>Usted no es un producto, sino un ser humano que busca un equilibrio, por lo tanto te recomendamos:</p>
     <p style="margin-left:20px;"><strong>Primero</strong> 
     <br>Recopile información detallada y personalizada basada en expectativas reales y conocimiento de todos los riesgos.</p>
     <p style="margin-left:20px;"><strong>Segundo</strong> 
     <br>Nunca decida durante la primera visita, tómese un tiempo para la meditación y vuelva a consultar con dudas y nuevas preguntas. 
-    <br>"Conoce a tu médico y hazle saber"</p>
+    <br>"Conoce a tu médico y haz que él te conozca"</p>
     
     <p style="margin-left:20px;"><strong>Tercero</strong> 
-    <br>Exija instalaciones hospitalarias que cumplan con los niveles de seguridad que su vida se merece.  Es mejor que no se haga una cirugía en lugar de estar expuesto a un accidente del que pueda arrepentirse.
+    <br>Exija instalaciones hospitalarias que cumplan con los niveles de seguridad que su vida se merece.  Es mejor que no se haga una cirugía, en lugar de estar expuesto a un accidente del que pueda arrepentirse.
     </p>
 
     <p style="margin-left:20px;"><strong>Cuarto</strong> 
-    <br>No hay una ausencia absoluta de riesgos, ni una garantía total de los resultados (es imposible controlar todos los mecanismos de reacción o cicatrización en la persona); sin embargo, una mente tranquila en un corazón compasivo siempre resulta en éxito.
+    <br>No hay una ausencia absoluta de riesgos, ni una garantía total de los resultados (es imposible controlar todos los mecanismos de reacción o cicatrización en la persona); sin embargo, una mente tranquila en un corazón compasivo siempre conlleva al éxito.
     </p>
 
     <p style="margin-left:20px;"><strong>Quinto</strong> 

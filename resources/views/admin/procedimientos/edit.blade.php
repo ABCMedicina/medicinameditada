@@ -62,19 +62,15 @@
     </div>
     <script>
     function agregarNegrita() {
-        // Obtener el contenido de la textarea
         var contenido = document.getElementById("preguntas").value;
 
-        // Buscar preguntas con signos de interrogación
         var preguntas = contenido.match(/\?.*?\?/g);
 
-        // Agregar etiquetas de negrita a las preguntas
         for (var i = 0; i < preguntas.length; i++) {
             var preguntaNegrita = "<b>" + preguntas[i] + "</b>";
             contenido = contenido.replace(preguntas[i], preguntaNegrita);
         }
 
-        // Mostrar el contenido actualizado en la textarea
         document.getElementById("preguntas").value = contenido;
     }
 </script>

@@ -10,9 +10,9 @@
   <div class="hero-content flex-col lg:flex-row-reverse">
 
   <div class="flex-col">
-                <img id="image3" src="{{ asset('storage/images/recons.jpg') }}"  />
+                <img id="image3" src="{{ asset('storage/images/reconst.jpg') }}"  />
                 <br>
-                <img id="image3" src="{{ asset('storage/images/reconstructiva2.jpg') }}"  />
+                <img id="image3" src="{{ asset('storage/images/recons2.jpg') }}"  />
   </div>
 
 

@@ -106,18 +106,18 @@
     <tbody>
     <tr>
         <th>Lunes</th>
-        <td>10:00 am – 4:00 pm</td>
+        <td>12:00 pm – 6:00 pm</td>
       </tr>
       <tr>
       <th>Martes</th>
-        <td>10:00 am – 4:00 pm</td>
+        <td>10:00 am – 6:00 pm</td>
       </tr>
       <tr>
       <th>Miércoles</th>
-        <td>10:00 am – 4:00 pm</td>
+        <td>10:00 am – 6:00 pm</td>
       </tr>
       <th>Jueves</th>
-        <td>10:00 am – 4:00 pm</td>
+        <td>10:00 am – 6:00 pm</td>
       </tr>
       <th>Viernes</th>
         <td>10:00 am – 2:00 pm</td>

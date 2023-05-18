@@ -36,6 +36,7 @@ class BackupController extends Controller
 
 
     public function descargar_backup($file)
+    
     {
 
         return Storage::disk('local')->download(env('APP_NAME') .'/'.$file);
