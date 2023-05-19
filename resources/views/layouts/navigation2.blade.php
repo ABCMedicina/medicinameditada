@@ -35,8 +35,8 @@
         </a>
             <ul class="z-10 " style="background-color: #496063; color: white; ">
             <li><a href="{{route('cancer_mama')}}">Cáncer de mama</a></li>
-            <li><a href="{{route('cirugia')}}">Cirugía Reconstructiva en México</a></li>
             <li><a href="{{route('cirugia_plastica')}}">Cirugía Plástica</a></li>
+            <li><a href="{{route('cirugia')}}">Cirugía Reconstructiva en México</a></li>
             <li><a href="{{route('braquioplastia')}}">Estética de brazos</a></li>
             <li><a href="{{route('ginecomastia')}}">Torso masculino</a></li>
             </ul>
@@ -104,10 +104,10 @@
                     <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
                     </label>
                     <ul tabindex="0" class="menu menu-compact dropdown-content shadow bg-base-200 rounded-box" style="background-color: #496063; color: white; width: 250px;">
-                        <li><a href="{{route('braquioplastia')}}">Estética de brazos</a></li>
-                        <li><a href="{{route('cancer_mama')}}">Cáncer de mama</a></li>
+                    <li><a href="{{route('cancer_mama')}}">Cáncer de mama</a></li>
                         <li><a href="{{route('cirugia_plastica')}}">Cirugía Plástica</a></li>
                         <li><a href="{{route('cirugia')}}">Cirugía Reconstructiva en México</a></li>
+                        <li><a href="{{route('braquioplastia')}}">Estética de brazos</a></li>
                         <li><a href="{{route('ginecomastia')}}">Torso masculino</a></li>
                     </ul>
                 </div>
@@ -123,10 +123,7 @@
                 </div>
 
                 <a id="labels" href="{{route('videos')}}" class="btn btn-sm btn-ghost">
-                Videos&nbsp;
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-                        <path d="M3.25 4A2.25 2.25 0 001 6.25v7.5A2.25 2.25 0 003.25 16h7.5A2.25 2.25 0 0013 13.75v-7.5A2.25 2.25 0 0010.75 4h-7.5zM19 4.75a.75.75 0 00-1.28-.53l-3 3a.75.75 0 00-.22.53v4.5c0 .199.079.39.22.53l3 3a.75.75 0 001.28-.53V4.75z" />
-                    </svg>
+                Videos
                 </a>
 
                 @if (Auth::check() && Auth::user()->rol_id == 3)
