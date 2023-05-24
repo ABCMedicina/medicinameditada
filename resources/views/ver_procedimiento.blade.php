@@ -7,16 +7,13 @@
 
     <div class="hero min-h-screen bg-base-200" >
           <div class="hero-content flex-col lg:flex-row ml-24 mr-24">
-            <img class="max-w-sm rounded-lg shadow-2xl procedimiento-img" src="{{asset('storage/images/procedimientos/pr/p'.$procedimiento->id.'.jpg') }}" alt="Procedimientos">
+            <img class="max-w-sm rounded-lg shadow-2xl procedimiento-img" src="{{asset('storage/images/procedimientos/p'.$procedimiento->id.'.jpg') }}" alt="Procedimientos">
             
             <div>
                   <br>
                 <h1 id="tittle" class="text-xl sm:text-4xl font-bold" align="center">{{ $procedimiento->nombre }}</h1>
 
                 <p id="desc" class="py-6 text-md sm:text-md">{!! nl2br(e($procedimiento->descripcion)) !!}</p>
-
-
-
                 <!--<button id="boton" class="btn btn-primary">Solicitar cita</button>-->
                 @if (Auth::check() && Auth::user()->rol_id == 3)
                               <div class="text-center">
@@ -64,6 +61,11 @@
 
 }
 
+#desc{
+  text-align:justify;
+
+}
+
 @media screen and (max-width: 768px) {
   .hero-content {
     font-size: 5.5vw;
@@ -97,7 +99,9 @@
   }
 #desc{
   font-size: 3vw;
-  padding-left:20px;
+  margin-left:10px;
+
+  text-align:justify;
 
 }
 
@@ -106,15 +110,19 @@
 @media screen and (max-width: 475px) {
 #desc{
   font-size: 4.5vw;
-  margin-left:20px;
+  margin-left:2px;
+  margin-right:-15px;
 
-text-align:center;
+text-align:justify;
 }
 #tittle{
   margin-top:-20px;
   font-size: 7vw;
   text-align:center;
-
+  margin-left:26px;
+}
+.text-center{
+  margin-left:15%;
 }
 }
 

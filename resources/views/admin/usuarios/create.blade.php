@@ -50,7 +50,7 @@
                             <x-input-error :messages="$errors->get('apellidos')" class="mt-2" />
                         </div>
 
-                        <!-- Documento -->
+                        <!-- CURP -->
                         <div>
                             <x-input-label for="documento" :value="__('CURP')" />
                             <x-text-input id="documento" class="input block mt-1 w-full" type="text" name="documento" :value="old('documento')" placeholder="Solo letras mayúsculas y números" required />
@@ -64,12 +64,12 @@
                             <x-input-error :messages="$errors->get('fecha_nacimiento')" class="mt-2" />
                         </div>
 
-                        <!-- Telefono -->
+                        <!-- Telefono 
                         <div>
                             <x-input-label for="telefono" :value="__('Telefono')" />
                             <x-text-input id="telefono" class="input block mt-1 w-full" type="text" name="telefono" :value="old('telefono')" placeholder="Ingrese solo números" required />
                             <x-input-error :messages="$errors->get('telefono')" class="mt-2" />
-                        </div>
+                        </div>-->
 
                         <!-- Direccion 
                         <div>

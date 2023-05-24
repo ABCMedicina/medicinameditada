@@ -11,8 +11,6 @@
       <li><a href="{{route('acercade')}}">Quiénes somos</a></li>
 
 
-      
-      
         <li tabindex="0">
           <a>
             Procedimientos
@@ -41,11 +39,12 @@
             <li><a href="{{route('ginecomastia')}}">Torso masculino</a></li>
             </ul>
         </li>  
+
         <li><a href="{{route('horarios')}}">Horarios de atención</a></li>
 
         <li tabindex="0"><a>Agendar
-                        <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
-                    </a>
+                            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
+                        </a>
                         <ul class="bg-base-100 z-10" style="background-color: #496063; color: white;">
                             <!--<li><a href="{{route('dashboard')}}">Agendar nueva cita</a></li> -->
                             @if (Auth::check() && Auth::user()->rol_id == 3)
@@ -54,11 +53,12 @@
                           <li><a href="{{route('dashboard')}}">Agendar nueva cita</a></li>
                           @endif                       
                         </ul>
-                    </li>
+        </li>
         
-        <li><a href="{{route('contacto')}}">Contacto</a></li>
-      </ul>
+        <li><a href="{{route('contacto')}}" style="margin-right:10px;">Contacto</a></li>
+
     </div>
+    
     <div class="navbar-end hidden lg:flex">
         @if (Route::has('login'))
             <div>
@@ -91,29 +91,21 @@
                 </svg>
             </button>
             <div class="flex items-center ml-5">
-            <h1>MEDICINA MEDITADA</h1>
+            <h1 style="font-size:15px;">CIRUGÍA PLÁSTICA MEDITADA</h1>
             
         </div>
         </div>
       
       <!-- Responsive Navigation Menu -->
         <div :class="{'block': open, 'hidden': ! open}" class="flex flex-col items-start mt-3" style="margin-left: -110px; " >
+                
+                <a id="labels" href="{{route('acercade')}}" class="btn btn-sm btn-ghost mb-2">
+                     Quiénes somos
+                </a>
+
+
                 <div class="dropdown">
-                    <label id="labels" tabindex="0" class="btn btn-sm btn-ghost" style="width: 100%;">
-                    Revista
-                    <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
-                    </label>
-                    <ul tabindex="0" class="menu menu-compact dropdown-content shadow bg-base-200 rounded-box" style="background-color: #496063; color: white; width: 250px;">
-                    <li><a href="{{route('cancer_mama')}}">Cáncer de mama</a></li>
-                        <li><a href="{{route('cirugia_plastica')}}">Cirugía Plástica</a></li>
-                        <li><a href="{{route('cirugia')}}">Cirugía Reconstructiva en México</a></li>
-                        <li><a href="{{route('braquioplastia')}}">Estética de brazos</a></li>
-                        <li><a href="{{route('ginecomastia')}}">Torso masculino</a></li>
-                    </ul>
-                </div>
-            
-                <div class="dropdown">
-                    <label id="labels" tabindex="0" class="btn btn-sm btn-ghost w-full ">
+                    <label id="labels" tabindex="0" class="btn btn-sm btn-ghost w-full mb-2 ">
                     Procedimientos
                     <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
                     </label>
@@ -122,18 +114,35 @@
                     </ul>
                 </div>
 
-                <a id="labels" href="{{route('videos')}}" class="btn btn-sm btn-ghost">
+
+                <a id="labels" href="{{route('videos')}}" class="btn btn-sm btn-ghost mb-2">
                 Videos
                 </a>
 
+
+                <div class="dropdown">
+                    <label id="labels" tabindex="0" class="btn btn-sm btn-ghost mb-2" style="width: 100%;">
+                    Blog
+                    <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
+                    </label>
+                    <ul tabindex="0" class="menu menu-compact dropdown-content shadow bg-base-200 rounded-box " style="background-color: #496063; color: white; width: 250px; margin-bottom:8px;">
+                    <li><a class="py-4" href="{{route('cancer_mama')}}">Cáncer de mama</a></li>
+                        <li><a class="py-4" href="{{route('cirugia_plastica')}}">Cirugía Plástica</a></li>
+                        <li><a class="py-4" href="{{route('cirugia')}}">Cirugía Reconstructiva en México</a></li>
+                        <li><a class="py-4" href="{{route('braquioplastia')}}">Estética de brazos</a></li>
+                        <li><a class="py-4" href="{{route('ginecomastia')}}">Torso masculino</a></li>
+                    </ul>
+                </div>
+            
+                <a id="labels" href="{{route('horarios')}}" class="btn btn-sm btn-ghost mb-2">Horarios de atención</a>
+
                 @if (Auth::check() && Auth::user()->rol_id == 3)
-                    <a id="labels" href="{{route('citas.buscar')}}" class="btn btn-sm btn-ghost">Agendar</a>
+                    <a id="labels" href="{{route('citas.buscar')}}" class="btn btn-sm btn-ghost mb-2">Agendar</a>
                 @else
-                    <a id="labels" href="{{route('dashboard')}}" class="btn btn-sm btn-ghost">Agendar</a>
+                    <a id="labels" href="{{route('dashboard')}}" class="btn btn-sm btn-ghost mb-2">Agendar</a>
                 @endif
 
-                <a id="labels" href="{{route('horarios')}}" class="btn btn-sm btn-ghost">Horarios</a>
-                <a id="labels" href="{{route('contacto')}}" class="btn btn-sm btn-ghost ">Contacto</a>
+                <a id="labels" href="{{route('contacto')}}" class="btn btn-sm btn-ghost mb-2 ">Contacto</a>
 
                 @auth
                         <a href="{{ url('/dashboard') }}" class="btn btn-sm btn-success ml-3 mt-1">Mi espacio</a>
@@ -181,10 +190,10 @@
             background-color: #209ce2;
     }
 
-    @media screen and (max-width: 553px) {
+    @media screen and (max-width: 453px) {
         .parent {
         display: grid;
-        grid-template-columns: repeat(2 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-gap: 10px;
     }
 

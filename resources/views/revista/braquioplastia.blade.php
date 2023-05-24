@@ -54,6 +54,7 @@
 
 #descb{
   font-size:16px;
+  text-align:justify;
 }
 
 #imagebraquio{

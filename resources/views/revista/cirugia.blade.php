@@ -60,6 +60,8 @@
 
 #descr{
   font-size:16px;
+  text-align:justify;
+
 }
 
 #image3{

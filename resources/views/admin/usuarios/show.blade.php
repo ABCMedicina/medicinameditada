@@ -32,7 +32,7 @@
                           <p> <span class="font-semibold">Fecha nacimiento:</span> {{ $user->fecha_nacimiento }} 
                           <div class="badge badge-sm badge-outline ">{{$user->edad}} años</div></p>
                           </div>
-                          <p> <span class="font-semibold">Teléfono:</span> {{ $user->telefono }}</p>
+                         <!-- <p> <span class="font-semibold">Teléfono:</span> {{ $user->telefono }}</p>-->
                           <p> <span class="font-semibold">Correo:</span> {{ $user->email }}</p>
                           <p> <span class="font-semibold">Estado:</span> 
                               @if ($user->estado == 1)

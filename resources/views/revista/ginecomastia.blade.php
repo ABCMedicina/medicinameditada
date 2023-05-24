@@ -22,10 +22,10 @@
     <div>
       <p id="gineco" class="text-5xl font-bold">Torso masculino</p>
       <p id="descg" class="py-6">
-      Es el aumento de los pechos en niños y hombres debido a exceso de tejido graso en el área del tórax.  Es un incremento benigno (no canceroso), este trastorno es resultado de un desequilibrio de la testosterona (hormona masculina) y el estrógeno (hormona femenina). Generalmente la ginecomastia no causa problemas de salud, pero puede ocasionar sensibilidad y vergüenza que disminuye la autoestima de un hombre.
-      <br><p id="descg2" >Reducción de senos masculinos </p>
+      La ginecomastia es el aumento de los pechos en niños y hombres debido a exceso de tejido graso en el área del tórax.  Es un incremento benigno (no canceroso), este trastorno es resultado de un desequilibrio de la testosterona (hormona masculina) y el estrógeno (hormona femenina). Generalmente la ginecomastia no causa problemas de salud, pero puede ocasionar sensibilidad y vergüenza que disminuye la autoestima de un hombre.
+      <br><p id="descg2" >ESTÉTICA PECTORAL </p>
       <p id="descg">Es un procedimiento quirúrgico que elimina el tejido mamario aumentado “senos masculinos” ginecomastia.  El exceso de grasa en los senos masculinos puede impedir que se consiga un tórax firme y tonificado. La cirugía de ginecomastia elimina este exceso de células grasas de manera permanente brindando una apariencia más masculina que  eleva la confianza y la autoestima de un hombre</p>
-      <br>> Mejora los contornos del pecho, para que pueda sentirse más cómodo sin importar la ropa que utilicen.
+      <br><p id="descg">> Mejora los contornos del pecho, para que pueda sentirse más cómodo sin importar la ropa que utilicen.
 
       <br><br>> Mejora la limpieza e higiene, generalmente se forman pliegues o arrugas en la piel que pueden originar diferentes problemas en la piel, al elimina el exceso de tejido mamario, mejora la higiene del área.
 
@@ -62,10 +62,12 @@
 }
 #descg{
   font-size:16px;
-
+text-align:justify;
 }
 #descg2{
   font-size: 23px;
+  text-align:center;
+
 }
 
 #image4{
@@ -84,13 +86,11 @@
   }
   #descg{
   font-size: 4.5vw;
-  padding-right:23px;
 }
 #descg2{
   font-size: 4.5vw;
 }
   #ref4{
-    padding-right:25px;
     text-align:left;
   }
 
@@ -114,7 +114,6 @@
 @media screen and (max-width: 553px) {
   #descg {
     font-size: 4vw;
-    margin-left:15px;
   }
   #gineco {
     font-size: 5vw;

@@ -7,7 +7,7 @@
 <br>
 
 <div class="container">
-<div id="card1" class="card w-auto h-auto mb-10 bg-blue text-primary-content" style="margin: 0 0.5rem; color:white;">
+<div id="card1" class="card w-auto h-auto mb-10 bg-blue text-primary-content" style="margin: 0 0.5rem; color:white; text-align:justify;">
   <div class="card-body">
     <h2 class="card-title text-center">Misión</h2>
     <p style="color:white;">Fomentar servicios de salud especializados con los más altos estándares de calidad y ética en cirugía plástica, estética y reconstructiva, estableciendo nuestro compromiso para resaltar la belleza externa e interna de nuestros pacientes con el entendido que es fundamental la unión del cuerpo, la mente y el alma</p>
@@ -17,37 +17,49 @@
 </div>
 
 <br>
-
-<div class="card w-auto  bg-blue text-primary-content" style="margin: 0 0.5rem;">
+<div id="card1" class="card w-auto h-auto mb-10 bg-blue text-primary-content" style="margin: 0 0.5rem; color:white; text-align:justify;">
   <div class="card-body">
-    <h2 class="card-title">Visión</h2>
-    <p style="color:white;">Ser el mejor servicio de cirugía plástica, estética y reconstructiva, que proporcione un servicio de excelencia, bienestar, salud, belleza y con un trato de calidez y cercanía, considerando sus necesidades físicas para lograr el equilibrio físico, mental y espiritual de nuestros pacientes</p>
+    <h2 class="card-title text-center">Visión</h2>
+    <p style="color:white;">Ser un servicio de cirugía plástica, estética y reconstructiva, que proporcione una atención de excelencia, bienestar, salud y belleza, con un trato de calidez y cercanía, armonizando sus características físicas que lo lleven a lograr el equilibrio físico, mental y espiritual.</p>
     <div class="card-actions justify-end">
     </div>
   </div>
 </div>
+
 <br>
-<div id="card3" class="card bg-blue text-primary-content" style="margin: 0 0.5rem;">
-  <div class="card-body"  >
-    <h2 class="card-title">Valores</h2>
-      <p style="color:white;">- Calidad&nbsp;&nbsp;&nbsp;&nbsp;
-      - Respeto&nbsp;&nbsp;&nbsp;&nbsp;
-      - Honestidad&nbsp;&nbsp;&nbsp;&nbsp;
-      - Confianza</p>
+
+
+<div id="card1" class="card w-auto h-auto mb-10 bg-blue text-primary-content" style="margin: 0 0.5rem; color:white;">
+  <div class="card-body">
+    <h2 class="card-title text-center">Valores</h2>
+    <div class="two-column-paragraph">
+    <div class="btn-group">
+    <button class="btn btn-info custom-btn" style="margin-right: 45px; margin-bottom: 10px; background-color: #63784c; color: white; border-color: #63784c;">Calidad</button>
+  <button class="btn btn-info custom-btn" style="margin-right: 45px; margin-bottom: 10px; background-color: #63784c; color: white; border-color: #63784c;">Respeto</button>
+  <button class="btn btn-info custom-btn" style="margin-right: 45px; margin-bottom: 10px; background-color: #63784c; color: white; border-color: #63784c;">Honestidad</button>
+  <button class="btn btn-info custom-btn" style="margin-right: 45px; margin-bottom: 10px; background-color: #63784c; color: white; border-color: #63784c;">Confianza</button>
+
+</div>  
+      
+    </div>
     <div class="card-actions justify-end">
     </div>
   </div>
 </div>
+
+
+
 </div>
 </div>
 </div>
 </div>
 </div>
+
 <br>
 <div id="tmedio" class="hero bg-base-200">
   <div class="hero-content flex-col lg:flex-row">
     <div>
-      <p class="py-6">En la actualidad, la cirugía plástica, estética y reconstructiva ofrece diversas opciones para mejorar la calidad de vida y apariencia física.  Nuestro mayor compromiso es su salud, entendida como “La comunión del cuerpo, la mente y el alma”, porque de la comprensión de esta unión, viene el secreto de la eternidad.</p>
+      <p class="py-6">En la actualidad, la cirugía plástica, estética y reconstructiva ofrece diversas opciones para mejorar la calidad de vida y apariencia física.  Nuestro mayor compromiso es su salud, entendida como “La comunión del cuerpo, la mente y el alma”, porque en el entendimiento de esta unidad, está la clave de la eternidad.</p>
     </div>
   </div>
 </div>
@@ -56,14 +68,14 @@
 <div id="tfinal" class="hero bg-base-200" >
   <div class="hero-content flex-col lg:flex-row">
     <div>
-      <h1 style="font-size:25px;">Cómo obtener una cirugía segura</h1>
-      <p class="py-6">La cirugía plástica implica tomar muchas decisiones. La primera y la más importante, es elegir un cirujano confiable. El mejor indicador de la capacidad que debe tener un cirujano plástico es el que cuente con un número de certificación y una cédula de especialista en Cirugía Plástica Estética y Reconstructiva que avale su conocimiento y pericia, además de ser miembro activo de la Asociación Mexicana de Cirugía Plástica, Estética y Reconstructiva A.C. para evitar caer en manos de charlatanes.
+      <h1 style="font-size:25px;">Cómo obtener una cirugía plástica segura</h1>
+      <p class="py-6">La cirugía plástica implica tomar muchas decisiones, la primera y la más importante es elegir a un cirujano confiable. El mejor indicador de la capacidad que debe tener un cirujano plástico es que cuente con un número de certificación vigente otorgada por el Consejo Mexicano de Cirugía Plástica Estética y Reconstructiva A.C., así como una cédula de especialista en Cirugía Plástica Estética y Reconstructiva que avale su conocimiento y pericia.
       
-      <br><br>Elegir a un Cirujano Plástico certificado permite tener una mayor seguridad de que está poniendo su cuerpo en buenas manos. Un Cirujano Plástico estudia la carrera de Médico Cirujano (Médico General) 6 años, seguidos de 3 a 4 años de Cirugía General y finalmente en la actualidad 3 o 4 años de Cirugía Plástica. Al término de su especialización, solicita la certificación de su capacidad profesional por el Consejo Mexicano de Cirugía Plástica, Estética y Reconstructiva principalmente formado por profesores de postgrado de dicha especialidad. Para ello se presentan diversos exámenes de alto grado de dificultad para así ratificar sus conocimientos en la materia.
+      <br><br>Elegir a un Cirujano Plástico certificado permite tener una mayor seguridad de que está poniendo su cuerpo en buenas manos. Un Cirujano Plástico estudia la carrera de Médico Cirujano (Médico General) 6 a 7 años, seguido de 2 a 4 años de Cirugía General y finalmente 4 años de Cirugía Plástica. Al término de su especialización, solicita la certificación de su capacidad profesional por el Consejo Mexicano de Cirugía Plástica, Estética y Reconstructiva, principalmente formado por profesores de postgrado de dicha especialidad.
     
-      <br><br>Una vez certificado, ingresa a la Asociación Mexicana de Cirugía Plástica, Estética y Reconstructiva A.C. El cirujano plástico continúa preparándose y actualizándose con cursos y congresos tanto Nacionales como Internacionales, recertificándose ante el Consejo Mexicano de Cirugía Plástica, Estética y Reconstructiva cada 5 años para continuar con el ejercicio de su especialidad.
+      <br><br>El cirujano plástico continúa preparándose y actualizándose con cursos y congresos tanto Nacionales como Internacionales, recertificándose ante el Consejo Mexicano de Cirugía Plástica, Estética y Reconstructiva cada 5 años para continuar con el ejercicio de su especialidad.
     
-      <br><br>La mejor manera de evitar complicaciones innecesarias y obtener un buen resultado es ponerse en manos de un Cirujano Plástico certificado y miembro activo de la Asociación Mexicana de Cirugía Plástica, Estética y Reconstructiva A.C. Desconfíe de quien afirma sólo ser Cirujano Estético, ya que no tiene los conocimientos, ni la preparación que se requiere para llevar a cabo algún procedimiento quirúrgico de forma segura.
+      <br><br>La mejor manera de evitar complicaciones innecesarias y obtener un buen resultado es ponerse en manos de un Cirujano Plástico certificado y realizar los procedimientos en instituciones médicas de alta calidad que cuenten con instalaciones modernas y teconología de vanguardia.
       </p>
     </div>
   </div>
@@ -75,7 +87,7 @@
     <img src="{{ asset('storage/images/fotografia.jpg') }}" class="max-w-sm rounded-lg shadow-2xl" />
     <div>
       <h1 class="text-5xl font-bold" style="font-size:22px; padding-left:25px;">Dr. Ramiro Hesiquio Silva, PhD</h1>
-      <p class="py-6">&nbsp;Cirujano Plástico Estético y Reconstructivo.
+      <p id="ne" class="py-6">&nbsp;Cirujano Plástico Estético y Reconstructivo.
       <br>&nbsp;Doctor en Ciencias, Universidad de São Paulo, Brasil.
       <br>&nbsp;Presidente Fundador Vitalicio de Reconstrucción Mamaria A.C.</p>
       <p>&nbsp;Reconocido Cirujano Plástico, experto en:
@@ -89,28 +101,31 @@
         <br>&nbsp;&middot; Lifting de Muslos</p>
         <br>
 
-        
-
     </div>
   </div>
   
 </div>
-        <div align="center" style="background-color:#f2f2f2;">
-            <iframe width="500" height="290" src="https://www.youtube.com/embed/aRK4B9Kjf0E" allowfullscreen></iframe>
-            <br>
-        </div>
-<br>
 
+
+<div class="car">
+  <div class="card">
+    <div class="card-body text-center">
+      <iframe width="100%" height="290" src="https://www.youtube.com/embed/aRK4B9Kjf0E" allowfullscreen style="border-radius: 10px;"></iframe>
+    </div>
+  </div>
+</div>
+
+<br>
 
 <!--nuevos-->
 
-<div class="collapse" style="margin-left:20px; margin-right:20px;">
+<div class="collapse" style="margin-left:20px; margin-right:20px; text-align:justify;">
   <input type="checkbox" /> 
   <div class="collapse-title  bg-gray-200" id="cont">
-  <span class="mas">+</span>Importancia de elegir un cirujano plástico certificado para procedimientos quirúrgicos estéticos
+  <span class="mas">+</span>Importancia de elegir un cirujano plástico certificado para procedimientos quirúrgicos estéticos y reconstructivos
   </div>
   <div class="collapse-content"> 
-  <p><br>La mejor manera de evitar complicaciones innecesarias y obtener un buen resultado es ponerse en manos de un Cirujano Plástico certificado y miembro activo de la Asociación Mexicana de Cirugía Plástica, Estética y Reconstructiva A.C. Desconfíe de quien afirma sólo ser Cirujano Estético, ya que no tiene los conocimientos, ni la preparación que se requiere para llevar a cabo algún procedimiento quirúrgico de forma segura.</p>
+  <p><br>La mejor manera de evitar complicaciones innecesarias y obtener un buen resultado es ponerse en manos de un Cirujano Plástico certificado.</p>
   </div>
 </div>
 
@@ -123,8 +138,6 @@
   <p><br>&middot; Si tiene capacitación específica en Cirugía Plástica, Estética y Reconstructiva.
 
 <br>&middot; Si está certificado por el Consejo Mexicano de Cirugía Plástica, Estética y Reconstructiva.
-
-<br>&middot; Si es miembro activo de la Asociación Mexicana de Cirugía Plástica, Estética y Reconstructiva.
 
 <br>&middot; En qué hospitales o clínicas realiza los procedimientos.
 
@@ -159,13 +172,13 @@
 </div>
 
 
-<div class="collapse" style="margin-left:20px; margin-right:20px;">
+<div class="collapse" style="margin-left:20px; margin-right:20px; text-align:justify;">
   <input type="checkbox" /> 
   <div class="collapse-title  bg-gray-200" id="cont">
   <span class="mas">+</span>Cómo saber si estoy con el cirujano adecuado para mí
   </div>
   <div class="collapse-content"> 
-  <p><br> El éxito de la primera consulta, así como de la intervención quirúrgica y la segundad de la misma dependen mucho de la sinceridad y honestidad de sus respuestas durante la consulta. Le harán varias preguntas acerca de su salud y su estilo de vida a lo cual deberá responder honestamente y sin temor para establecer una mejor relación médico-paciente</p>
+  <p><br> El éxito de la primera consulta, así como de la intervención quirúrgica dependen mucho de la sinceridad y honestidad de sus respuestas durante la consulta. Le harán varias preguntas acerca de su salud y su estilo de vida a lo cual deberá responder honestamente y sin temor para establecer una mejor relación médico-paciente</p>
 
 </div>
 </div>
@@ -177,7 +190,7 @@
   <span class="mas">+</span>Qué preguntas debo responder a mi cirujano
   </div>
   <div class="collapse-content"> 
-  <p><br>&middot; ¿Porqué quiere hacerse la cirugía?
+  <p><br>&middot; ¿Por qué quiere hacerse la cirugía?
 
 <br>&middot; ¿Cuáles son sus expectativas y qué resultado espera obtener?
 
@@ -222,7 +235,7 @@
   <div class="hero-content flex-col lg:flex-row">
     <div>
       <p class="py-6" style="font-size:14px;">IMPORTANTE: Parte del éxito de su cirugía dependerá de su cirujano plástico, pero la otra parte dependerá de que usted como paciente lleve a cabo las indicaciones y recomendaciones postoperatorias, esto le permitirá obtener un mejor resultado.
-      <br>Ningún procedimiento quirúrgico esta libre de riesgos, sin embargo, si usted acude con un cirujano plástico certificado con cédula de especialista, miembro activo de la AMCPER y el procedimiento se lleva a cabo en un lugar adecuado, ya sea hospital o clínica que cuente con los servicios necesarios y sigue las instrucciones de su médico, los riesgos serán menores.</p>
+      <br>Ningún procedimiento quirúrgico está libre de riesgos, sin embargo, si usted acude con un cirujano plástico certificado con cédula de especialista y el procedimiento se lleva a cabo en un lugar adecuado, ya sea hospital o clínica que cuente con los servicios necesarios y siga las instrucciones de su médico, los riesgos serán menores.</p>
     </div>
   </div>
 </div>
@@ -242,6 +255,28 @@
 
 
 <style>
+.custom-btn {
+    background-color: #63784c;
+    color: white;
+  }
+
+
+.car {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    background-color: #f2f2f2;
+    padding-bottom:90px;
+    padding-top:50px;
+
+  }
+
+  .card {
+    width: 600px;
+    border-radius: 10px;
+  }
+
     .mas {
         font-weight: bold;
         font-size: 1.5em; 
@@ -273,6 +308,7 @@
 
 p{
   color:#091a32;
+
 }
 .contenido{
   background-color:#c6c6c6;
@@ -292,22 +328,38 @@ p{
 }
 #tmedio{
   padding-left:110px; padding-right:80px;
+  text-align: justify;
+
 }
 
 #tfinal{
   padding-left:110px; padding-right:80px;
+  text-align: justify;
+
 }
 #tfinal2{
  padding-left:70px; padding-right:80px;
+ text-align: justify;
+
 }
+@media screen and (max-width: 365px) {
+    .break-on-dash {
+      word-break: break-all;
+    }
+  }
+
+
 @media screen and (max-width: 768px) {
   #tmedio, #tfinal, #tfinal2 {
     padding-left:10px;
     padding-right:10px;
-
+    text-align: justify;
   }
 }
-
-
+@media screen and (max-width: 480px) {
+  .container {
+  margin-left:18px;
+}
+}
 </style>
 @endsection

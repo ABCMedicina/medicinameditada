@@ -65,6 +65,7 @@
 
 #descc{
   font-size:16px;
+  text-align:justify;
 }
 
 #imageplastica{

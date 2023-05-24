@@ -65,10 +65,10 @@ class UserController extends Controller
            
             'nombres' => ["required", "string", "max:255", "regex:/^[a-zA-ZáéíóúñÑ\s'.-]+$/"],
             'apellidos' => ["required", "string", "max:255", "regex:/^[a-zA-ZáéíóúñÑ\s'.-]+$/"],
-            'documento' => ['required', 'string', 'max:30', 'regex:/^[A-Z0-9]+$/', 'unique:'.User::class],
+          'documento' => ['required', 'string', 'max:30', 'regex:/^[A-Z0-9]+$/', 'unique:'.User::class],
             'fecha_nacimiento' => ['required', 'date'],
            /* 'telefono' => ['required', 'string', 'max:30'],*/
-            'telefono' => ['required', 'numeric', 'digits:10'],
+           /* 'telefono' => ['required', 'numeric', 'digits:10'],*/
            /* 'direccion' => ['required', 'string', 'max:255'],*/
             'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'min:8', 'regex:/^(?=.*[a-z])(?=.*\d).+$/', 'confirmed', Rules\Password::defaults()],
@@ -81,7 +81,7 @@ class UserController extends Controller
             'apellidos' => $request->apellidos,
             'documento' => $request->documento,
             'fecha_nacimiento' => $request->fecha_nacimiento,
-            'telefono' => $request->telefono,
+            'telefono' => "",
             'direccion' => "",
             'email' => $request->email,
             'rol_id' => $request->rol_id,
@@ -134,7 +134,7 @@ class UserController extends Controller
             'documento' => ['required', 'string', 'max:30', 'regex:/^[A-Z0-9]+$/', 'unique:'.User::class.',documento,'.$user->id],
 
             'fecha_nacimiento' => ['required', 'date'],
-            'telefono' => ['required', 'numeric', 'digits:10'],
+            //'telefono' => ['required', 'numeric', 'digits:10'],
             //'direccion' => ['required', 'string', 'max:255'],
             // validar email unico excepto el que se esta editando
             'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class.',email,'.$user->id],
@@ -147,7 +147,7 @@ class UserController extends Controller
             'apellidos' => $request->apellidos,
             'documento' => $request->documento,
             'fecha_nacimiento' => $request->fecha_nacimiento,
-            'telefono' => $request->telefono,
+            'telefono' => "",
             'direccion' => "",
             'email' => $request->email,
             'rol_id' => $request->rol_id,

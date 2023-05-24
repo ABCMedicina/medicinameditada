@@ -11,7 +11,6 @@
                 <img id="image1" src="{{ asset('storage/images/cancermama1.jpg') }}" />
                 <br>
                 <img id="image1" src="{{ asset('storage/images/cancermama2.1.jpg') }}" />
-
         </div>
     <div>
       <p id="cancer" class="text-5xl font-bold">Cáncer de mama</p>
@@ -43,7 +42,7 @@
       </p>
       </p>
      <br>
-      <a href="{{ route('contacto') }}" class="btn btn-info btn-sm">Visítanos</a>
+      <a id="vis" href="{{ route('contacto') }}" class="btn btn-info btn-sm">Visítanos</a>
     </div>
   </div>
 </div>
@@ -61,6 +60,7 @@
 
 #desc{
   font-size:16px;
+  text-align:justify;
 }
 
 #image1{
@@ -80,7 +80,6 @@
   }
   #desc{
     font-size: 4.5vw;
-   padding-right: 60px;
   }
   #ref2
   {
@@ -109,12 +108,16 @@ text-align:center;  }
 @media screen and (max-width: 553px) {
   #desc {
     font-size: 4vw;
-    margin-left:15px;
+    padding-right:50px;
   }
   #cancer {
     font-size: 5vw;
-  }
+margin-left:55px; 
+ }
 
+#vis{
+  margin-left:-50px; 
+}
 }
 </style>
 @endsection

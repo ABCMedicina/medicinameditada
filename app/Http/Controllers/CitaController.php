@@ -151,6 +151,7 @@ class CitaController extends Controller
     public function buscar()
     {
         $procedimientos = Procedimiento::all();
+        $procedimientos= Procedimiento::where('activo', 1)->get();
         $fecha_min=\Carbon\Carbon::tomorrow()->format('Y-m-d');
         return view('citas.buscar', compact('procedimientos','fecha_min'));
        

@@ -58,7 +58,6 @@
                               <th></th>
                               <th>Nombre</th>
                               <th></th>
-                              <th>CURP</th>
                               <th>Email</th>
                               <th>Rol</th>
                               <th>Estado</th>
@@ -86,7 +85,6 @@
                                 </td>
                                
                               
-                                <td>{{ $usuario->documento }}</td>
                               
                                 <td>{{ $usuario->email }}</td>
                               

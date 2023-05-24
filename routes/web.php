@@ -85,6 +85,12 @@ Route::get('/revista/videos', function(){
 })->name('videos');
 
 
+//Ruta para aviso de privacidad
+Route::get('/revista/privacidad', function(){
+    return view('revista.privacidad');
+})->name('privacidad');
+
+
 //Ruta dashboard
 Route::get('/dashboard', [DashboardController::class,'index'])->middleware(['auth'])->name('dashboard');
 

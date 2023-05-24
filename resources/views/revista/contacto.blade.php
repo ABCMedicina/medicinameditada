@@ -3,22 +3,13 @@
 @section('title', 'Contacto')
 
 @section('content')
-<head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-lU/pczTXP9m9CmYa7mxvZlWfK8/5B/jC5wFTdl5oKk5B5d9bN+g24ZKvUEh1Gr+HrKxEP+n2LgkO13tR+V7XuA==" crossorigin="anonymous" />
 
-</head>
 <br>
-
 
 <div class="bg-primary mx-auto py-4" style="background-color: #091a32; max-width: 1150px;">
   <h1 class="text-white ml-3">Contáctanos</h1>
   <h3 class="text-white ml-3">Nos encantaría aclarar tus dudas personalmente</h3>
 </div>
-
-
-<a href="https://wa.me/5536240694" class="whatsapp-btn">
-  <i class="fab fa-whatsapp "></i> Contáctanos por WhatsApp</a>
-
 
 <div class="hero min-h-screen bg-base-200">
   <div class="hero-content flex-col lg:flex-row-reverse">
@@ -42,7 +33,6 @@
       @endif
         <form action="{{ route('email.contacto') }}" method="post">
           @csrf
-
             <div class="form-control">
               <label class="label">
                 <span class="label-text">Nombre</span>
@@ -68,10 +58,13 @@
               <button class="btn btn-primary">Enviar</button>
             </div>
           </form>
-      </div>
-      
+      </div>   
     </div>
     
+    <a href="https://wa.me/5536240694" class="whatsapp-btn">
+      <i class="fab fa-whatsapp "></i> Contáctanos por WhatsApp
+    </a>
+
   </div>
 </div>
 </div>
@@ -174,7 +167,6 @@ a[href^="mailto:"]::before {
   vertical-align: middle;
   color: #3C6A9D;
   font-size: 20px;
-
 }
 
 @media screen and (max-width: 768px) {
