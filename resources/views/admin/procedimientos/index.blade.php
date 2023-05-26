@@ -29,7 +29,7 @@
                         @foreach($procedimientos as $procedimiento)
                         <div class="card w-full bg-base-100 shadow-xl mt-5 border" >
                             <figure>
-                                <img class="mt-3 pl-3 pr-3 shadow-xl rounded-full" style="height:290px;" src="{{asset('storage/images/procedimientos/pr/p'.$procedimiento->id.'.jpg') }}" alt="Foto" />
+                              <!--  <img class="mt-3 pl-3 pr-3 shadow-xl rounded-full" style="height:290px;" src="{{asset('storage/images/procedimientos/pr/p'.$procedimiento->id.'.jpg') }}" alt="Foto" />-->
 
                             </figure>
                             <div class="card-body">

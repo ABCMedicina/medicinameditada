@@ -65,11 +65,11 @@
             <x-text-input id="password" class="input block mt-1 w-full"
                             type="password"
                             name="password"
-                            placeholder="Mín 8 caracteres, 1 número y 1 carácter especial"
                             required autocomplete="new-password" />
 
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
+        <small class="text-gray-500 text-sm">&middot; Mínimo 8 caracteres, 1 número y 1 carácter especial</small>
 
         <!-- Confirm Password -->
         <div class="mt-2">
@@ -116,5 +116,11 @@
         }
 
     </script>-->
+    <style>
+        .text-xs {
+  font-size: 0.75rem; /* Tamaño de fuente más pequeño */
+}
+
+    </style>
 </x-guest-layout>
 <br><br>

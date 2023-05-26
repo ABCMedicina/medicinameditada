@@ -4,6 +4,15 @@
 
 @section('content')
 
+<!--OCULTAR CARRUSEL EN ESTA VISTA-->
+<style>
+  .hide-carrusel {
+    display: none;
+}
+</style>
+
+<!-------------------------------->
+
 
 
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-3 content-center">
@@ -30,20 +39,8 @@
             <p>La mastectomía profiláctica es una cirugía preventiva en la cual se extirpan los senos de personas con alto riesgo de cáncer de mama. Ayuda a reducir el riesgo y brinda tranquilidad a aquellos con antecedentes familiares o mutaciones genéticas.
             </div>
     </div>
-
-    
-
-   
-
 </div>
-
-
-
 <br>
-
-
-
-
 <style>
   .video-container {
     border-radius: 10px;
@@ -56,7 +53,11 @@
   @media screen and (max-width: 920px) {
  
 }
-
+@media screen and (max-width: 487px) {
+  .ocultar-encabezado {
+    display: none;
+}
+}
 
 
 </style>

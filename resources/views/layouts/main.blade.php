@@ -18,16 +18,24 @@
         {{-- Menú de navegación --}}
             @include ('layouts.navigation2')
         </header>
-       
-<section id="carrusel">
+        <!--ESPACIOS PARA EL CARRUSEL MOVIL-->
+        
+        <!--------------------------------->
+
+
+        <!--CARRUSEL DE VIDEOS PARA ESCRITORIO-->
+<section id="carrusel" class="hide-carrusel">
 <br><br><br>
 <div class="carrusel-web">
+      <div id="espacios">
+          <br><br><br>
+        </div>
             <div class="carousel w-full">
               
               <div id="slide1" class="carousel-item relative w-full ">
              
                     <video autoplay muted loop>
-                        <source src="{{ asset('storage/images/cirujanos-pro.mp4') }}" type="video/mp4">
+                        <source src="{{ asset('storage/images/cirujanos-proced.mp4') }}" type="video/mp4">
                     </video>
                     <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a onclick="changeSlide(-1)" class="btn btn-circle">❮</a> 
@@ -38,7 +46,7 @@
                 <div id="slide2" class="carousel-item relative w-full">
         
                       <video autoplay muted loop>
-                        <source src="{{ asset('storage/images/embellece.mp4') }}" type="video/mp4">
+                        <source src="{{ asset('storage/images/sol.mp4') }}" type="video/mp4">
                     </video>
                     <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a onclick="changeSlide(-1)" class="btn btn-circle">❮</a> 
@@ -49,8 +57,10 @@
                 <div id="slide3" class="carousel-item relative w-full">
             
                 <video autoplay muted loop>
-                        <source src="{{ asset('storage/images/yoga.mp4') }}" type="video/mp4">
+                        <source src="{{ asset('storage/images/alimentos.mp4') }}" type="video/mp4">
                     </video>
+
+
                     <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a onclick="changeSlide(-1)" class="btn btn-circle">❮</a> 
                         <a onclick="changeSlide(1)" class="btn btn-circle">❯</a>
@@ -59,11 +69,7 @@
 
 
                 <div id="slide4" class="carousel-item relative w-full">
-               <!-- <p  id="mi-parrafo" class="absolute top-1/2 left-0 transform -translate-y-1/2 text-black text-center z-5" style="color:black;">
-                    "Uniendo la ciencia y el arte de la cirugía<br> plástica para brindar soluciones médicas<br> personalizadas y estéticamente armoniosas".</p>
-                    <img src="{{ asset('storage/images/carr4.jpg') }}" class="w-full" />
-                   
-                -->
+            
                 <video autoplay muted loop>
                         <source src="{{ asset('storage/images/hombre-yoga3.mp4') }}" type="video/mp4">
                     </video>
@@ -78,17 +84,103 @@
 </div>
 </section>
 
+<!--CARRUSEL DE IMAGENES PARA MOVIL, SE CAMBIA CADA 5 SEGUNDOS-->
 
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<div class="carrusel-movil">
+<div id="espacios">
+          <br>
+        </div>
+<div class="owl-carousel">
+  <div class="item">
+    <div class="image-container">
+      <img src="{{ asset('storage/images/movil/foto 9.jpg') }}" class="rounded-box" />
+    </div>
+  </div>
+  <div class="item">
+    <div class="image-container">
+      <img src="{{ asset('storage/images/movil/foto 5.jpg') }}" class="rounded-box" />
+    </div>
+  </div>
+  <div class="item">
+    <div class="image-container">
+      <img src="{{ asset('storage/images/movil/foto-10.jpg') }}" class="rounded-box" />
+    </div>
+  </div>
+  <div class="item">
+    <div class="image-container">
+      <img src="{{ asset('storage/images/movil/foto 8.jpg') }}" class="rounded-box" />
+    </div>
+  </div>
+  <div class="item">
+    <div class="image-container">
+      <img src="{{ asset('storage/images/movil/foto 6.jpg') }}" class="rounded-box" />
+    </div>
+  </div>
+  <div class="item">
+    <div class="image-container">
+      <img src="{{ asset('storage/images/movil/foto-1.jpg') }}" class="rounded-box" />
+    </div>
+  </div>
+  <div class="item">
+    <div class="image-container">
+      <img src="{{ asset('storage/images/movil/foto 2.jpg') }}" class="rounded-box" />
+    </div>
+  </div>
+  <div class="item">
+    <div class="image-container">
+      <img src="{{ asset('storage/images/movil/foto-2.jpg') }}" class="rounded-box" />
+    </div>
+  </div>
+  
+</div>
+</div>
+
+<!-- JavaScript para configurar el carrusel -->
+<script>
+  $(document).ready(function(){
+    $('.owl-carousel').owlCarousel({
+      items: 1,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 2000 // Cambiar cada 2 segundos
+    });
+  });
+</script>
 
 <style>
+
+    .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-container img {
+    max-width: 90%;
+    height: 340px;
+  }
+  .carousel-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
   .centered-container {
     margin-top:-100px;
     margin-bottom:-100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ajusta la altura a la altura total de la ventana del navegador */
+    height: 100vh; 
   }
     /* Estilos para pantallas de 487px o menos */
     @media screen and (max-width: 487px) {
@@ -96,17 +188,25 @@
             display: none;
         }
         
-        
+        .carrusel-movil {
+            display: block;
+        }
+        #espacios{
+          display:block;
+        }
     }
 
     /* Estilos para pantallas de 488px y superiores */
-    @media screen and (min-width: 88px) {
+    @media screen and (min-width: 488px) {
         .carrusel-movil {
             display: none;
         }
         
         .carrusel-web {
             display: block;
+        }
+        #espacios{
+          display:none;
         }
     }
 </style>
@@ -117,7 +217,6 @@
         
         <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded" style=" justify-content: center;">
             <div class="grid grid-flow-col gap-4" style="display: flex; justify-content: center; ">
-             <!-- <a href="{{route('acercade')}}" class="link link-hover">Acerca de nosotros</a> -->
               <a href="{{route('servicios')}}" class="link link-hover">Nuestros servicios</a> 
               <a href="{{route('contacto')}}" class="link link-hover">Contacto</a> 
               <a href="{{route('privacidad')}}" class="link link-hover">Aviso de privacidad</a> 
@@ -244,8 +343,6 @@ margin-right:40px;
 font-size:3.5vw;
 
 }
-
-
 
 }
 

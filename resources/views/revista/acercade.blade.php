@@ -1,10 +1,7 @@
 @extends('layouts.main')
-
 @section('title', 'Acerca de nosotos')
-
 @section('content')
-
-<br>
+@include('revista.encabezado')
 
 <div class="container">
 <div id="card1" class="card w-auto h-auto mb-10 bg-blue text-primary-content" style="margin: 0 0.5rem; color:white; text-align:justify;">
@@ -34,12 +31,14 @@
     <h2 class="card-title text-center">Valores</h2>
     <div class="two-column-paragraph">
     <div class="btn-group">
-    <button class="btn btn-info custom-btn" style="margin-right: 45px; margin-bottom: 10px; background-color: #63784c; color: white; border-color: #63784c;">Calidad</button>
-  <button class="btn btn-info custom-btn" style="margin-right: 45px; margin-bottom: 10px; background-color: #63784c; color: white; border-color: #63784c;">Respeto</button>
-  <button class="btn btn-info custom-btn" style="margin-right: 45px; margin-bottom: 10px; background-color: #63784c; color: white; border-color: #63784c;">Honestidad</button>
-  <button class="btn btn-info custom-btn" style="margin-right: 45px; margin-bottom: 10px; background-color: #63784c; color: white; border-color: #63784c;">Confianza</button>
-
-</div>  
+      <!--<button class="btn btn-info custom-btn" style="margin-right: 45px; margin-bottom: 10px; background-color: #63784c; color: white; border-color: #63784c;">Calidad</button>
+      <button class="btn btn-info custom-btn" style="margin-right: 45px; margin-bottom: 10px; background-color: #63784c; color: white; border-color: #63784c;">Respeto</button>
+      <button class="btn btn-info custom-btn" style="margin-right: 45px; margin-bottom: 10px; background-color: #63784c; color: white; border-color: #63784c;">Honestidad</button>
+      <button class="btn btn-info custom-btn" style="margin-right: 45px; margin-bottom: 10px; background-color: #63784c; color: white; border-color: #63784c;">Confianza</button>
+-->
+- Calidad &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Respeto 
+<br> - Honestidad  &nbsp;&nbsp;&nbsp;&nbsp;- Confianza
+    </div>  
       
     </div>
     <div class="card-actions justify-end">
@@ -331,6 +330,12 @@ p{
   text-align: justify;
 
 }
+#espacios{
+  display:block;
+}
+ .hide-carrusel{
+  display:none;
+ }
 
 #tfinal{
   padding-left:110px; padding-right:80px;
@@ -361,5 +366,12 @@ p{
   margin-left:18px;
 }
 }
+
+@media screen and (max-width: 487px) {
+  .ocultar-encabezado {
+    display: none;
+}
+}
+
 </style>
 @endsection

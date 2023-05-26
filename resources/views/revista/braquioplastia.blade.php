@@ -5,6 +5,8 @@
 @section('content')
 
       <br>
+
+      
 <div class="hero min-h-screen bg-base-200" id="hero">
   <div class="hero-content flex-col lg:flex-row-reverse">
           <div class="flex-col">

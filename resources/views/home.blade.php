@@ -16,11 +16,30 @@
               <p id="texto" class="mb-5" style=" color:white;" > Nuestro mayor compromiso es su salud, entendida como la comunión del cuerpo, la mente y el alma, <br>" Porque en el entendimiento de esta unidad, está la clave de la eternidad ".</p>
               <br><p  class="mb-5" style=" color:white; font-size:19px; " align="center"><strong> “No intentes curar el cuerpo, sin antes curar el alma”. <br><p style=" font-size:16px; color:white;">Hipócrates [400 a.C.]</p></strong></p>
               </div>
+             
         </div>
+        <div id="mantenerse">
+  </div>
     </div>
+  
+    <br>
+   
+  
+<!-- The button to open modal 
+<a href="#my-modal-2" class="btn w-full">CIRUGÍA PLÁSTICA MEDITADA</a>
+<div class="modal" id="my-modal-2">
+  <div class="modal-box">
+    <img id="imagenmedio" src="{{ asset('storage/images/log.jpg') }}" class="max-w-sm rounded-lg shadow-2xl" style="width:250px;" />
 
-    
-    <div id="text-medio" >
+
+    <div class="modal-action">
+     <a href="#mantenerse" class="btn btn-sm">Cerrar</a>
+    </div>
+  </div>
+</div>-->
+
+   <br><br>
+   <div id="text-medio" >
     <div class="hero min-h-screen">
             <div  class="hero-content flex-col lg:flex-row-reverse" >
              <img id="imagenmedio" src="{{ asset('storage/images/ejem2.jpg') }}" class="max-w-sm rounded-lg shadow-2xl" style="width:300px;" />
@@ -62,7 +81,13 @@
         </div>
     </div>
 <style>
-  
+   
+   .modal.full-width {
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
     p{
         color:black;
     }
